@@ -1,0 +1,11 @@
+<app-ui>
+    <div>
+        <button [class.active] = "isSelected" (click) = "onclick()">
+            <img [src]="image_path" [alt]="user.name">
+            <span>
+                {{user.name}}
+            </span>
+        </button>
+    </div>
+    
+</app-ui>

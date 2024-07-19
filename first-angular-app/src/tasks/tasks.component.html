@@ -1,0 +1,23 @@
+<section id="tasks">
+
+    @if(isAddingTask){
+        <tasks-new-task [userId]="userid" (closeCreate)="closeOption()"/>
+    }
+
+    <header>
+        <h2>{{username}}'s tasks</h2>
+    </header>
+    <menu>
+        <button (click)="onclick()">Add Task</button>
+    </menu>
+
+    <ul>
+        @for(currentTask of selectedUserTasks; track currentTask.id){
+            <li>
+                <tasks-task [usertask]="currentTask" />
+            </li>
+        }
+    </ul>
+</section>
+
+
