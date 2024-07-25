@@ -1,0 +1,46 @@
+<table>
+    <thead>
+        <th>
+            Year
+        </th>
+        <th>
+            Interest
+        </th>
+        <th>
+            Value at End of Year
+        </th>
+        <th>
+            Annual Investment
+        </th>
+        <th>
+            Total Interest
+        </th>
+        <th>
+            Total Amount Invested
+        </th>
+    </thead>
+    @for (current of annualData; track current.year) {
+        <tbody>
+            <tr>
+                <td>
+                    {{current.year}}
+                </td>
+                <td>
+                    {{current.interest | currency}}
+                </td>
+                <td>
+                    {{current.valueEndOfYear | currency}}
+                </td>
+                <td>
+                    {{current.annualInvestment | currency}}
+                </td>
+                <td>
+                    {{current.totalInterest | currency}}
+                </td>
+                <td>
+                    {{current.totalAmountInvested | currency}}
+                </td>
+            </tr>
+        </tbody>
+    }
+</table>
