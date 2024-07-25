@@ -1,0 +1,10 @@
+<app-header />
+<app-input (resultDisplay)="displayResult()"/>
+@if (outputResult) {
+    <app-results />
+}
+@else{
+    <p class="center">
+        Enter the Investment Values to view the result!
+    </p>
+}
